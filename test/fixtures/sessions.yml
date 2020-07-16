@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2020-07-15 15:33:29
+  category: one
+  topic: one
+  user: one
+
+two:
+  time: 2020-07-15 15:33:29
+  category: two
+  topic: two
+  user: two
