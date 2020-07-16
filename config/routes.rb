@@ -7,5 +7,5 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
     end
   end
-  resources :sessions, only: [:index]
+  resources :sessions, only: [:index, :show]
 end
