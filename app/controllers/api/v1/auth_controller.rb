@@ -10,4 +10,10 @@ class Api::V1::AuthController < ApplicationController
             render json: { message: 'Invalid email or password' }, status: :unauthorized
         end
     end
+
+    private
+
+    def user_login_params
+        params.require(:user).permit(:email, :password)
+    end
 end
