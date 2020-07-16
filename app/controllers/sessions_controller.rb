@@ -1,7 +1,12 @@
 class SessionsController < ApplicationController
     def index
         @sessions = Session.all 
-        render json: @sessions, :include => {:topic => {:only => [:id, :name, :vid_url]}, :category => {:only => [:id, :name]}}, except: [:category_id, :topic_id, :created_at, :updated_at]
+        # render json: @sessions
+        render json: @sessions, :include => {
+            :topic => {
+                :only => [:id, :name, :vid_url]}, 
+            :category => {:only => [:id, :name]}},
+            except: [:category_id, :topic_id, :created_at, :updated_at]
     end
 
     def show
