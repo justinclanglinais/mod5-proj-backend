@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
         render json: @sessions, :include => {
             :topic => {
                 :only => [:id, :name, :vid_url]}, 
-            :category => {:only => [:id, :name]}},
+            :category => {
+                :only => [:id, :name]},
+            :user => {
+                :only => [:name, :belt]}},
             except: [:category_id, :topic_id, :created_at, :updated_at]
     end
 
