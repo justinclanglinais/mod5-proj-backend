@@ -9,10 +9,18 @@ class Api::V1::UsersController < ApplicationController
     def show
         @user = User.find_by(id: params[:id])
         render json: @user, :include => {
-            :enrollments => {
-                :only => [:user_id, :session_id]
+            :sessions => {
+                :include => {
+                   :topic => {
+                       :only => [:id, :name, :vid_url]}, 
+                   :category => {
+                       :only => [:id, :name]},
+                   :user => {
+                       :only => [:name, :belt]}},
+                   except: [:category_id, :topic_id, :created_at, :updated_at]
             }
         }
+        
     end
 
     def profile
@@ -32,6 +40,6 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password, :name, :isAdmin, :age, :img_url, :belt)
+        params.require(:user).permit(:email, :password, :name, :isAdmin, :age, :img_url, :belt, sessions_attributes: [:id, :topic, :category])
     end
 end
