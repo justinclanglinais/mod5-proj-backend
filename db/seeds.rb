@@ -94,7 +94,8 @@ end
 
 10.times {
     Session.create(
-        time: Faker::Date.between(from: 2.days.ago, to: Date.today),
+        # .strftime("%A, %B%e - %l:%M%P")
+        time: Faker::Time.between(from: DateTime.now - 3, to: DateTime.now + 5, format: :long),
         category_id: rand(1..Category.all.count),
         topic_id: rand(1..Topic.all.count),
         user_id: rand(1..User.all.count)
