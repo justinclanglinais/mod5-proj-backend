@@ -14,6 +14,13 @@ class Api::V1::AuthController < ApplicationController
     end
 
     def show
+        token = request.headers['Authorization']
+        @user = User.find_by(id: token)
+        if @user
+            render json: { id: @user.id, email: @user.email }
+        else
+            render json: { message: 'Could not find this user' }
+        end
     end
 
     private
