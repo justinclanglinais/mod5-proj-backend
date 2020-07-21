@@ -9,7 +9,7 @@
 users = [
     {
         email: "justin@credible.com",
-        password_digest: "potato",
+        password: "potato",
         name: "Justin Langlinais",
         isAdmin: true,
         age: 37,
@@ -18,7 +18,7 @@ users = [
     },
     {
         email: "lucy@schnauz.com",
-        password_digest: "kale",
+        password: "kale",
         name: "Lucy Langlinais",
         isAdmin: true,
         age: 12,
@@ -27,7 +27,7 @@ users = [
     },
     {
         email: "ashton@holy.com",
-        password_digest: "marcelo",
+        password: "marcelo",
         name: "Ashton Ellis",
         isAdmin: true,
         age: 33,
@@ -36,7 +36,7 @@ users = [
     },
     {
         email: "steve@parsley.com",
-        password_digest: "lit",
+        password: "lit",
         name: "Steven Parsons",
         isAdmin: true,
         age: 22,

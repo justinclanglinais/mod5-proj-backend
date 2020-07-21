@@ -17,7 +17,7 @@ class Api::V1::AuthController < ApplicationController
         token = request.headers['Authorization']
         @user = User.find_by(id: token)
         if @user
-            render json: { id: @user.id, email: @user.email }
+            render json: { user: UserSerializer.new(@user) }
         else
             render json: { message: 'Could not find this user' }
         end
