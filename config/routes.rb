@@ -5,8 +5,9 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
-      get 'users', to: 'users#index'
-      get 'users/:id', to: 'users#show'
+      get '/users', to: 'users#index'
+      get '/users/:id', to: 'users#show'
+      get '/current_user', to: 'auth#show'
     end
   end
   resources :sessions, only: [:index, :show]
