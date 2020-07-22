@@ -17,4 +17,18 @@ class SessionsController < ApplicationController
         # render json: { id: @session.id, topic: @session.topic, category: @session.category }
         render json: @session, include: [:topic, :category]
     end
+
+    def update
+        # byebug
+        @session = Session.find_by(session_params[:id])
+        @session.update(session_params)
+        @session.save
+        render json: @session
+    end
+
+    private
+
+    def session_params
+        params.require(:session).permit(:id, :topic_id, :category_id, :user_id, :time)
+    end
 end

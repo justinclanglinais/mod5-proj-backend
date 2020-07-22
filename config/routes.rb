@@ -10,5 +10,5 @@ Rails.application.routes.draw do
       get '/current_user', to: 'auth#show'
     end
   end
-  resources :sessions, only: [:index, :show]
+  resources :sessions, only: [:index, :show, :update, :edit]
 end
