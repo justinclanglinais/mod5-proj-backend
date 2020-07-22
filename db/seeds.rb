@@ -102,7 +102,7 @@ end
     )
 }
 
-30.times {
+12.times {
     Enrollment.create(
         user_id: rand(1..User.all.count),
         session_id: rand(1..Session.all.count)
