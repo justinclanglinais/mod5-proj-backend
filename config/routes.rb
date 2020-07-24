@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     end
   end
   resources :sessions, only: [:index, :show, :update, :edit]
+  get '/topics', to: 'topics#index'
+  get '/categories', to: 'categories#index'
 end
