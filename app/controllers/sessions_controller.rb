@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
 
     def show
         @session = Session.find_by(id: params[:id])
-        # render json: { id: @session.id, topic: @session.topic, category: @session.category }
         render json: @session, include: [:topic, :category]
     end
 
