@@ -1,9 +1,8 @@
 class EnrollmentsController < ApplicationController
-    def create
-        byebug
-    
+    def create  
         @enrollment = Enrollment.new(enrollment_params)
         if @enrollment.valid?
+            @enrollment.save
             render json: { enrollment: @enrollment }
         end
     end
