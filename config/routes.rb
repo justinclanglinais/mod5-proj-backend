@@ -10,7 +10,8 @@ Rails.application.routes.draw do
       get '/current_user', to: 'auth#show'
     end
   end
-  resources :sessions, only: [:index, :show, :update, :edit]
+  resources :sessions, only: [:create, :index, :show, :update, :edit]
+  resources :enrollments, only: [:create, :index]
   get '/topics', to: 'topics#index'
   get '/categories', to: 'categories#index'
 end

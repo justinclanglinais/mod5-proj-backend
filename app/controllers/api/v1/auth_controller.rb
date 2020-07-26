@@ -12,11 +12,10 @@ class Api::V1::AuthController < ApplicationController
     end
 
     def show
-        byebug
         token = request.headers['Authorization']
-        @user = User.find_by(jwt: token)
+        @user = User.find_by(id: token)
         if @user
-            render json: { user: UserSerializer.new(@user), potato: "wowies" }
+            render json: { user: UserSerializer.new(@user) }
         else
             render json: { message: 'Could not find this user' }
         end

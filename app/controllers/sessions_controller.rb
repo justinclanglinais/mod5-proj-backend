@@ -1,4 +1,15 @@
 class SessionsController < ApplicationController
+    def create
+        
+        @session = Session.new(session_params)
+        if @session.valid?
+            @session.save
+            render json: { session: SessionSerializer.new(@session)}, status: :created
+        else
+            render json: { error: 'failed to create session' }, status: :not_acceptable
+        end
+    end
+
     def index
         @sessions = Session.all 
         # render json: @sessions
