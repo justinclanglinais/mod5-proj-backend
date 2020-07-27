@@ -29,8 +29,7 @@ class SessionsController < ApplicationController
     end
 
     def update
-        # byebug
-        @session = Session.find_by(session_params[:id])
+        @session = Session.find_by(id: session_params[:id])
         @session.update(session_params)
         @session.save
         render json: @session
