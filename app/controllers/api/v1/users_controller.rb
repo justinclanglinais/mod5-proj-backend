@@ -37,6 +37,11 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
+    def instructors
+        @users = User.instructors
+        render json: @users
+    end
+
     private
 
     def user_params

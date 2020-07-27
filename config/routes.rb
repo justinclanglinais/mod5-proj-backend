@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get '/users', to: 'users#index'
       get '/users/:id', to: 'users#show'
       get '/current_user', to: 'auth#show'
+      get '/instructors', to: 'users#instructors'
     end
   end
   resources :sessions, only: [:create, :index, :show, :update, :edit]

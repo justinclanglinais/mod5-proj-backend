@@ -13,16 +13,16 @@ users = [
         name: "Justin Langlinais",
         isAdmin: true,
         age: 37,
-        img_url: "https://imgur.com/GNT1pAb",
+        img_url: "https://i.imgur.com/GNT1pAb.jpg",
         belt: "brown"
     },
     {
         email: "swizzlez@joeybaby.org",
         password: "grotcha",
         name: "Joe Peterson",
-        isAdmin: true,
+        isAdmin: false,
         age: 40,
-        img_url: "https://imgur.com/QEkoFYc",
+        img_url: "https://i.imgur.com/QEkoFYc.jpg",
         belt: "blue"
     },
     {
@@ -31,25 +31,25 @@ users = [
         name: "Ashton Ellis",
         isAdmin: true,
         age: 33,
-        img_url: "https://imgur.com/AovDURF",
+        img_url: "https://i.imgur.com/AovDURF.jpg",
         belt: "black"
     },
     {
         email: "steve@parsley.com",
         password: "lit",
         name: "Steven Parsons",
-        isAdmin: true,
+        isAdmin: false,
         age: 22,
-        img_url: "https://imgur.com/eu2Zju0",
+        img_url: "https://i.imgur.com/eu2Zju0.jpg",
         belt: "white"
     },
     {
         email: "harry@richard.edu",
         password: "yea",
         name: "Harris Richardson",
-        isAdmin: true,
+        isAdmin: false,
         age: 34,
-        img_url: "https://imgur.com/hBzM1Is",
+        img_url: "https://i.imgur.com/hBzM1Is.jpg",
         belt: "blue"
     },
     {
@@ -58,7 +58,7 @@ users = [
         name: "Nick Heuth",
         isAdmin: true,
         age: 47,
-        img_url: "https://imgur.com/weLHjXA",
+        img_url: "https://i.imgur.com/weLHjXA.jpg",
         belt: "black"
     },
     {
@@ -67,7 +67,7 @@ users = [
         name: "Brian Johnson",
         isAdmin: true,
         age: 47,
-        img_url: "https://imgur.com/wNCqvxd",
+        img_url: "https://i.imgur.com/wNCqvxd.jpg",
         belt: "black"
     },
     {
@@ -76,7 +76,7 @@ users = [
         name: "Ryan Davis",
         isAdmin: true,
         age: 23,
-        img_url: "https://imgur.com/71qStAw",
+        img_url: "https://i.imgur.com/71qStAw.jpg",
         belt: "purple"
     },
     {
@@ -85,7 +85,7 @@ users = [
         name: "Kamau Kambui",
         isAdmin: true,
         age: 46,
-        img_url: "https://imgur.com/rqmqbyd",
+        img_url: "https://i.imgur.com/rqmqbyd.jpg",
         belt: "black"
     }
 ]
@@ -143,11 +143,11 @@ end
         time: Faker::Time.between(from: DateTime.now - 3, to: DateTime.now + 5, format: :long),
         category_id: rand(1..Category.all.count),
         topic_id: rand(1..Topic.all.count),
-        user_id: rand(1..User.all.count)
+        user_id: User.instructors[rand(0..User.instructors.count - 1)].id
     )
 }
 
-12.times {
+20.times {
     Enrollment.create(
         user_id: rand(1..User.all.count),
         session_id: rand(1..Session.all.count)
