@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
     end
 
     def index
-        @sessions = Session.all 
+        # @sessions = Session.all 
+        @sessions = Session.order("id ASC")
         # render json: @sessions
         render json: @sessions, :include => {
             :topic => {
