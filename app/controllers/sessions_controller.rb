@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
     def index
         # @sessions = Session.all 
         @sessions = Session.order("id ASC")
-        # render json: @sessions
         render json: @sessions, :include => {
             :topic => {
                 :only => [:id, :name, :vid_url]}, 
