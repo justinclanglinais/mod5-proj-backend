@@ -13,17 +13,17 @@ users = [
         name: "Justin Langlinais",
         isAdmin: true,
         age: 37,
-        img_url: "my face",
+        img_url: "https://imgur.com/GNT1pAb",
         belt: "brown"
     },
     {
-        email: "lucy@schnauz.com",
-        password: "kale",
-        name: "Lucy Langlinais",
+        email: "swizzlez@joeybaby.org",
+        password: "grotcha",
+        name: "Joe Peterson",
         isAdmin: true,
-        age: 12,
-        img_url: "my face",
-        belt: "black"
+        age: 40,
+        img_url: "https://imgur.com/QEkoFYc",
+        belt: "blue"
     },
     {
         email: "ashton@holy.com",
@@ -31,7 +31,7 @@ users = [
         name: "Ashton Ellis",
         isAdmin: true,
         age: 33,
-        img_url: "my face",
+        img_url: "https://imgur.com/AovDURF",
         belt: "black"
     },
     {
@@ -40,8 +40,53 @@ users = [
         name: "Steven Parsons",
         isAdmin: true,
         age: 22,
-        img_url: "my face",
+        img_url: "https://imgur.com/eu2Zju0",
         belt: "white"
+    },
+    {
+        email: "harry@richard.edu",
+        password: "yea",
+        name: "Harris Richardson",
+        isAdmin: true,
+        age: 34,
+        img_url: "https://imgur.com/hBzM1Is",
+        belt: "blue"
+    },
+    {
+        email: "nick@heuthdogs.com",
+        password: "comeupjustin",
+        name: "Nick Heuth",
+        isAdmin: true,
+        age: 47,
+        img_url: "https://imgur.com/weLHjXA",
+        belt: "black"
+    },
+    {
+        email: "brian@nwjja.net",
+        password: "brian",
+        name: "Brian Johnson",
+        isAdmin: true,
+        age: 47,
+        img_url: "https://imgur.com/wNCqvxd",
+        belt: "black"
+    },
+    {
+        email: "ryan@youngandhandsome.org",
+        password: "youngandhandsome",
+        name: "Ryan Davis",
+        isAdmin: true,
+        age: 23,
+        img_url: "https://imgur.com/71qStAw",
+        belt: "purple"
+    },
+    {
+        email: "kamau@kambui.com",
+        password: "kambui",
+        name: "Kamau Kambui",
+        isAdmin: true,
+        age: 46,
+        img_url: "https://imgur.com/rqmqbyd",
+        belt: "black"
     }
 ]
 
