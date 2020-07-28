@@ -13,7 +13,7 @@ users = [
         name: "Justin Langlinais",
         isAdmin: true,
         age: 37,
-        img_url: "https://i.imgur.com/GNT1pAb.jpg",
+        img_url: "https://i.imgur.com/G5CqsGR.jpg",
         belt: "brown"
     },
     {
@@ -92,7 +92,7 @@ users = [
 
 topics = [
     {
-        name: "Guard",
+        name: "Closed Guard",
         vid_url: "youtube"
     },
     {
@@ -106,23 +106,50 @@ topics = [
     {
         name: "Back Mount",
         vid_url: "youtube"
+    },
+    {
+        name: "Top Control",
+        vid_url: "youtube"
+    },
+    {
+        name: "North South",
+        vid_url: "youtube"
+    },
+    {
+        name: "Open Guard",
+        vid_url: "youtube"
+    },
+    {
+        name: "Mount",
+        vid_url: "youtube"
+    },
+    {
+        name: "Worm Guard",
+        vid_url: "youtube"
+    },
+    {
+        name: "Leg Drags",
+        vid_url: "youtube"
+    },
+    {
+        name: "Guillotines",
+        vid_url: "youtube"
     }
 ]
 
 categories = [
     {
-        name: "Kids 5-10"
+        name: "Kids - 5-10"
     },
     {
-        name: "Kids 11-15"
+        name: "Kids - 11-15"
     },
     {
-        name: "Adults Fundamentals"
+        name: "Adults - Fundamentals"
     },
     {
-        name: "Adults Advanced"
-    },
-    
+        name: "Adults - Advanced"
+    }
 ]
 
 users.each do |user|
