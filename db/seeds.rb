@@ -93,47 +93,47 @@ users = [
 topics = [
     {
         name: "Closed Guard",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=V0OX0VZN9Qw"
     },
     {
         name: "Side Control",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=QN-e9JlILuA"
     },
     {
         name: "Kneeride",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=1Kfn0FA5hHo"
     },
     {
         name: "Back Mount",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=nvHE5e4Bwho"
     },
     {
         name: "Top Control",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=Dxe3ek6SMmo"
     },
     {
         name: "North South",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=Lhk4EZl4jjE"
     },
     {
         name: "Open Guard",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=mKiXbVLHNNQ"
     },
     {
         name: "Mount",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=-AQ9W_TZZEk"
     },
     {
         name: "Worm Guard",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=lLvkMU0xdHw&t=365s"
     },
     {
         name: "Leg Drags",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=M-K4NNM2DDc&t=524s"
     },
     {
         name: "Guillotines",
-        vid_url: "youtube"
+        vid_url: "https://www.youtube.com/watch?v=_VfDZ4ZRTHY"
     }
 ]
 
@@ -151,6 +151,7 @@ categories = [
         name: "Adults - Advanced"
     }
 ]
+
 
 users.each do |user|
     User.create(user)
