@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get '/instructors', to: 'users#instructors'
     end
   end
-  resources :sessions, only: [:create, :index, :show, :update, :edit]
+  resources :sessions, only: [:create, :index, :show, :update, :edit, :destroy]
   resources :enrollments, only: [:create, :index]
   get '/topics', to: 'topics#index'
   get '/categories', to: 'categories#index'

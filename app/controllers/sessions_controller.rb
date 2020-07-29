@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
     def create
-        
         @session = Session.new(session_params)
         if @session.valid?
             @session.save
@@ -11,7 +10,7 @@ class SessionsController < ApplicationController
     end
 
     def index
-        @sessions = Session.order("id ASC")
+        @sessions = Session.order("time ASC")
         render json: @sessions, :include => {
             :topic => {
                 :only => [:id, :name, :vid_url]}, 
@@ -32,6 +31,11 @@ class SessionsController < ApplicationController
         @session.update(session_params)
         @session.save
         render json: @session
+    end
+
+    def destroy
+        @session = Session.find_by(id: params[:id])
+        @session.destroy
     end
 
     private
