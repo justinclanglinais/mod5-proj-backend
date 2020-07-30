@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
   resources :sessions, only: [:create, :index, :show, :update, :edit, :destroy]
-  resources :enrollments, only: [:create, :index]
+  resources :enrollments, only: [:create, :index, :destroy]
   get '/topics', to: 'topics#index'
   get '/categories', to: 'categories#index'
 end

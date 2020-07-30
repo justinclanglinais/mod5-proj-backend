@@ -10,6 +10,10 @@ class EnrollmentsController < ApplicationController
         @enrollments = Enrollment.all
         render json: { enrollments: @enrollments }
     end
+    def destroy
+        @enrollment = Enrollment.find_by(id: params[:id])
+        @enrollment.destroy
+    end
     private
     def enrollment_params
         params.require(:enrollment).permit(:user_id, :session_id, :id)
