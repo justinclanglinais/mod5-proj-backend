@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         @sessions = Session.order("time ASC")
         render json: @sessions, :include => {
             :topic => {
-                :only => [:id, :name, :vid_url]}, 
+                :only => [:id, :name, :vid_url],},
             :category => {
                 :only => [:id, :name]},
             :user => {
